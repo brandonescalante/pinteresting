@@ -1,10 +1,12 @@
 <div class="jumbotron center">
-	<h1>Share your brews!</h1>
-	<h3>Let your friends and strangers know what brew you're drinking with Brewy!</h3>
-
-	<p>Click here to</p>
+	<h1>Peek inside Restaurants</h1>
+	<h3>WallFly is simply an easy way to take peek inside that restaurant you're debating about going to tonight. Is it packed? How's the atmosphere? All easily rated.</h3>
+	<% if user_signed_in? %>
+	# do something
+	<% else %>
 	<p>
-		<%= link_to "Log in", "#", class: "btn btn-default btn-lg" %>
-		<%= link_to "Sign up", "#", class: "btn btn-primary btn-lg" %>
+		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</p>
+	<% end %>
 </div>
